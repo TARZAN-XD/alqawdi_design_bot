@@ -1,10 +1,12 @@
 services:
   - type: web
     name: alqawdi_design_bot
-    runtime: python
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "python bot.py"
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    pythonVersion: 3.10.13
     envVars:
       - key: BOT_TOKEN
         value: 8179443658:AAGeoe3hzy1ObM0c4KdfYYPLQVmF4qd0j98
-    pythonVersion: 3.10.13
